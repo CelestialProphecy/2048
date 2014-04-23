@@ -396,17 +396,22 @@ hr {
   -moz-transition-property: -moz-transform;
   transition-property: transform; }
   .tile .tile-inner {
-    border-radius: 3px;
+    border-radius: 100%;
+    border: solid 3px rgba(0,0,0,.9);
     background: #f5f5f5;
     text-align: center;
     font-weight: bold;
     z-index: 10;
     font-family: 'Source Code Pro', Courier;
     font-size: 16px; 
-    color: #354b59;}
+    color: #354b59;
+    -webkit-animation: turnwheel 2s infinite ;
+  }
   .tile.tile-2 .tile-inner {
-    background: url('../tile-sets/bikes/2.png');
+    background-color: white;
+    background-image: url('../tile-sets/bikes/2.png');
     background-size: 100%;
+    
     color: rgba(0,0,0,0);
     box-shadow: 0 0 30px 10px rgba(243, 215, 116, 0), inset 0 0 0 1px rgba(255, 255, 255, 0); }
   .tile.tile-4 .tile-inner {
@@ -1014,3 +1019,7 @@ a.retry-button {
   margin-left: 10px;
   float: center;
 }
+
+/** animation to spin the tiles **/
+
+@-webkit-keyframes turnwheel{ 100% { -webkit-transform: rotate(360deg); } }
