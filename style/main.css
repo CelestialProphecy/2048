@@ -406,6 +406,7 @@ hr {
     font-size: 16px; 
     color: #354b59;
     -webkit-animation: turnwheel 2s infinite ;
+    -moz-animation: turnwheel 2s infinite;
   }
   .tile.tile-2 .tile-inner {
     background-color: white;
@@ -1023,3 +1024,4 @@ a.retry-button {
 /** animation to spin the tiles **/
 
 @-webkit-keyframes turnwheel{ 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes turnwheel{ 100% { -moz-transform: rotate(360deg); } }
